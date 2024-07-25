@@ -1,0 +1,30 @@
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+
+  @include tabled {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  &__body {
+    max-width: 528px;
+
+    & :not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      @include flex-center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    height: var(--button-height) !important;
+    width: var(--button-width);
+  }
+}

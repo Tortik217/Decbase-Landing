@@ -1,0 +1,50 @@
+body {
+  @include fluid-text(16, 14);
+
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a,
+button,
+input,
+textarea {
+  transition: var(--transition);
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lock {
+  overflow-x: hidden
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1, .h1 {
+  @include fluid-text(72, 50);
+}
+
+h2, .h2 {
+  @include fluid-text(48, 36);
+}
+
+h3, .h3 {
+  @include fluid-text(30, 26);
+}
+
+h4, .h4 {
+  @include fluid-text(24, 20);
+}
+
+h5, .h5 {
+  @include fluid-text(20, 18);
+}

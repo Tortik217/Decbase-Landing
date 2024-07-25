@@ -1,0 +1,83 @@
+.testimonials {
+  &__body {
+    @include tabled {
+      @include flex-center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 100px;
+
+    @include tabled {
+      flex-direction: column;
+      row-gap: 40px;
+      max-width: 632px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 65px;
+  }
+
+  &__card {
+    display: flex;
+    column-gap: 30px;
+    padding: 40px 40px 50px 65px;
+    border-radius: var(--border-radius-large);
+    box-shadow: 7px 7px 30px 5px rgba(#426054, 0.15);
+    position: relative;
+
+    &__inner {
+      padding-left: 30px;
+    }
+
+    &__image {
+      @include abs-center;
+      left: 0px;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-gray);
+
+      &::after {
+        content: "";
+        width: 38px;
+        height: 38px;
+        background: url(../../images/testimonials/quotes.svg) center /contain no-repeat;
+        font-weight: 700;
+        font-size: 96px;
+        color: var(--color-accent-alt);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      &-name {
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--color-dark);
+      }
+    }
+
+    &__description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.56;
+      color: var(--color-gray);
+
+      & > blockquote {
+        padding: 0;
+        margin: 0;
+      }
+      
+    }
+  }
+}

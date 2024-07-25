@@ -1,0 +1,65 @@
+.subscribe {
+  position: relative;
+
+  &__inner {
+    max-width: 772px;
+    padding-bottom: 70px;
+    margin-inline: auto;
+
+    @include tabled {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: var(--color-dark);
+    margin-bottom: 77px;
+
+    position: relative;
+
+    &::after {
+      @include abs-center;
+
+      content: '';
+      top: 137%;
+      width: 70%;
+      height: 2px;
+      background-color: #c4c4c4;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    line-height: 1.56;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-inline: auto;
+    max-width: 647px;
+
+    color: var(--color-gray);
+
+  }
+
+  &__form {
+    display: flex;
+    height: var(--input-height);
+
+    &-input {
+      width: 100%;
+      padding-left: 27px;
+      background-color: #eeeeee;
+      border: none;
+      border-radius: 20px 0 0 0;
+    }
+  }
+
+  &__button {
+    height: var(--input-height) !important;
+    border-radius: 0 0 20px 0 !important;
+    text-transform: uppercase;
+  }
+}

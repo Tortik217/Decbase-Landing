@@ -1,0 +1,111 @@
+.statistics {
+  padding-block: 90px 105px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 87px;
+
+  @include tabled {
+    padding-block: 50px;
+  }
+
+  &__header {
+    text-align: center;
+
+    &__title {
+      font-family: var(--font-family-accent);
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    width: 100%;
+
+    @include mobile {
+      width: 80%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    min-height: 278px;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-more);
+
+    @include square(185px);
+
+    &:nth-child(even) {
+
+      align-self: flex-end;
+
+      &::after {
+        top: 0;
+        left: 100%;
+        background: url(../../images/arrow-2.svg) center / cover no-repeat;
+      }
+    }
+
+    &:nth-child(odd) {
+      align-self: flex-start;
+
+      &::after {
+        top: 50%;
+        left: 100%;
+        background: url(../../images/arrow-1.svg) center / cover no-repeat;
+      }
+    }
+
+
+    &:nth-child(even):not(:last-child)::after,
+    &:nth-child(odd):not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 218px;
+      height: 97px;
+
+      @include desktop {
+        width: 160px;
+      }
+
+      @include tabled {
+        display: none;
+      }
+    }
+
+
+    &-body {
+      @include abs-center;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.67;
+    color: var(--color-gray);
+    white-space: nowrap;
+  }
+}

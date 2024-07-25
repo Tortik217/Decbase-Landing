@@ -1,0 +1,57 @@
+.services {
+  overflow: hidden;
+
+  &__inner {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1rem;
+    padding-inline: 2rem;
+    padding-block-end: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 37px;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  &__item {
+    scroll-snap-align: start;
+  }
+
+  &__card {
+    padding: 35px;
+
+    display: flex;
+    column-gap: 20px;
+    max-width: 425px;
+    height: 100%;
+
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    transition-property: color, background-color;
+
+    svg {
+      overflow: visible;
+      transition: fill var(--transition);
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+      color: var(--color-light);
+
+      svg {
+        fill: var(--color-light);
+      }
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+  }
+
+
+}

@@ -1,0 +1,17 @@
+.button {
+  @include reset-button;
+  padding: 15px 19px;
+  background-color: var(--color-button);
+  color: var(--color-light);
+  height: var(--button-height-small);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  
+  @include flex-center;
+
+  @include hover {
+    background-color: var(--color-accent-alt);
+  }
+}

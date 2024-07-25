@@ -1,0 +1,46 @@
+:root {
+  --color-dark: #212121;
+  --color-light: #ffffff;
+  --color-accent: #CAA892;
+  --color-accent-alt: #B0855B;
+  --color-gray: #646464;
+  --color-gray-alt: #898989;
+  --color-button: #37806B;
+
+  --border: 1px solid var(--color-accent-alt);
+  --border-radius-image: 20% 0 20% 0;
+  --border-radius: 20px 0 20px 0;
+  --border-radius-small: 10px 0 10px 0;
+  --border-radius-large: 60px 0 60px 0;
+
+  --shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.14);
+  --shadow-button: -1px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  --shadow-more: 0 13px 16px 0 rgba(0, 0, 0, 0.1);
+
+  --font-family-base: 'Open Sans', 'sans-serif';
+  --font-family-accent: 'Poppins', 'sans-serif';
+
+  --container-width: 1346px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 70px;
+
+  --input-height: 50px;
+  --button-height-small: 32px;
+  --button-height: 42px;
+  --button-height-large: 42px;
+  --button-width-small: 97px;
+  --button-width: 142px;
+  --button-width-large: 271px;
+
+  --transition-duration: 0.2s;
+  --transition: .2s ease;
+
+  @include desktop {
+    --section-padding-y: 50px;
+  }
+
+  @include mobile {
+    --section-padding-y: 40px;
+  }
+}

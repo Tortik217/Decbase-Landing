@@ -1,0 +1,27 @@
+@import 
+    'normalize', 
+    'mixins', 
+    'fonts', 
+    'globals', 
+    'media', 
+    'utils', 
+    'variables';
+
+@import 
+    './blocks/soc1als.scss',
+    './blocks/footer.scss',
+    './blocks/subscribe.scss',
+    './blocks/news.scss',
+    './blocks/testimonials',
+    './blocks/statistics',
+    './blocks/experience',
+    './blocks/about',
+    './blocks/services',
+    './blocks/backdrop-border',
+    './blocks/section',
+    './blocks/cross-button',
+    './blocks/mobile-overlay',
+    './blocks/button',
+    './blocks/hero',
+    './blocks/burger-button',
+    './blocks/header';

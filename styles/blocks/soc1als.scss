@@ -1,0 +1,26 @@
+.soc1als {
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+  }
+
+  &__link {
+    color: var(--color-dark);
+    background-color: #D5D5D5;
+    border-radius: 50%;
+
+    @include flex-center(true);
+    @include square(37px);
+
+    @include hover {
+      background-color: var(--color-button);
+    }
+
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}

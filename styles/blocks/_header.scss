@@ -1,0 +1,58 @@
+.header {
+  padding-top: 34px;
+
+  @include tabled {
+    padding-top: 15px;
+  }
+
+  &__logo {
+    min-width: 151px;
+    height: auto;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    @include tabled {
+      column-gap: 15px;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      @include desktop {
+        column-gap: 20px;
+        font-size: 12px;
+      }
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+
+      @include hover {
+        color: var(--color-gray);
+      }
+    }
+  }
+
+  &__button {
+    height: var(--button-height-small);
+    padding: 5px 19px;
+    background-color: var(--color-accent);
+    width: var(--button-width-small);
+    text-transform: unset;
+  }
+}
