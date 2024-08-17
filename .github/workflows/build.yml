@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install  # Установка зависимостей
 
+      - name: Set permissions for Vite
+        run: chmod +x ./node_modules/.bin/vite
+
       - name: Build the app
         run: npx vite build  # Сборка проекта
 
