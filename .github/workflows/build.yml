@@ -25,12 +25,12 @@ jobs:
         run: npm install  # Установка зависимостей
 
       - name: Build the app
-        run: npm run build  # Сборка проекта
+        run: npx vite build  # Сборка проекта
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Путь к папке со сборкой
+          publish_dir: ./dist  # Путь к папке со сборкой
 
       
